@@ -7,36 +7,36 @@ package com.mycompany.demo1;
 import java.util.Scanner;
 
 public class SapXepChen {
-    public static void In(int a[],int n){
-        for(int i=0;i<n;i++){
-		          System.out.print(a[i]+" ");
-	}
+
+    public static void In(int a[], int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i] + " ");
+        }
     }
-    
+
     public static void main(String[] args) {
-        
-      Scanner sc = new Scanner(System.in);
+
+        Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        
-              
+
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            
+
             arr[i] = sc.nextInt();
         }
         for (int i = 0; i < n; i++) {
-            int key  = arr[i];
-            int j = i-1;
-            while(j >= 0 && arr[j] > key){
-                arr[j+1] = arr[j];
-                j=j-1;
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
             }
-            arr[j+1] = key;
-            System.out.print("Buoc "+(i)+": ");
-            In(arr,i+1);
+            arr[j + 1] = key;
+            System.out.print("Buoc " + (i) + ": ");
+            In(arr, i + 1);
             System.out.println("");
         }
-      
+
     }
 }
